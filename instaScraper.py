@@ -133,7 +133,7 @@ class Scraper:
 
         # get the no of posts
         try:
-            no_of_posts = str(self.driver.find_element_by_xpath('//span[@id = "react-root"]//header/section/ul/li//span[@class = "g47SY "]').text).replace(',', '') 
+            no_of_posts = str(self.driver.find_element_by_xpath('//div[@id = "react-root"]//header/section/ul/li//span[@class = "g47SY "]').text).replace(',', '') 
             self.no_of_posts = int(no_of_posts)
             print('{0} has {1} posts'.format(self.target_username, self.no_of_posts))   
         except Exception:
